@@ -45,7 +45,7 @@
     "http-status": "^1.7.3",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "node-pg-migrate": "^6.2.2",
+    "node-pg-migrate": "^8.0.4",
     "nodemailer": "^8.0.3",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
