@@ -1,5 +1,5 @@
 # ─── Base ──────────────────────────────────────────────────────────────────────
-FROM node:20-alpine AS base
+FROM node:25-alpine AS base
 WORKDIR /app
 RUN apk add --no-cache dumb-init
 COPY package*.json ./
@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build
 
 # ─── Production ────────────────────────────────────────────────────────────────
-FROM node:20-alpine AS production
+FROM node:25-alpine AS production
 WORKDIR /app
 
 # Non-root user for security
