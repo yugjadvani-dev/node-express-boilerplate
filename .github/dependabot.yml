@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '09:00'
+    open-pull-requests-limit: 10
+    groups:
+      typescript:
+        patterns: ['typescript', '@types/*', 'ts-*']
+      testing:
+        patterns: ['jest', '@types/jest', 'supertest', 'ts-jest']
+      linting:
+        patterns: ['eslint*', 'prettier*']
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly

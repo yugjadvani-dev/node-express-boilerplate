@@ -1,0 +1,55 @@
+# ─── Dependencies ─────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ─── Build output ─────────────────────────────────────────────────────────────
+dist/
+build/
+
+# ─── Environment variables (NEVER commit these) ────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.test
+# Allow example files to be committed
+!.env.example
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ─── Testing ──────────────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ─── OS files ─────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# ─── Editor / IDE ─────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─── TypeScript ───────────────────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+.docker/
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+.cache/
+tmp/
+temp/
