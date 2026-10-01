@@ -1,13 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { MigrationBuilder, ColumnDefinitions } from 'node-pg-migrate';
 
-export const shorthands: ColumnDefinitions | undefined = undefined;
-
-/**
- * Sessions table — tracks active refresh tokens per device.
- * Enables "logout from all devices" and per-device session management.
- */
-export async function up(pgm: MigrationBuilder): Promise<void> {
+export async function up(pgm) {
   // Add last_login_at to users table
   pgm.addColumns('users', {
     last_login_at: { type: 'timestamptz', notNull: false },

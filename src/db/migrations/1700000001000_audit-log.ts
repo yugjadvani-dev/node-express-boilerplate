@@ -1,14 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { MigrationBuilder, ColumnDefinitions } from 'node-pg-migrate';
 
-export const shorthands: ColumnDefinitions | undefined = undefined;
-
-/**
- * Audit log table — records security-relevant events such as login attempts,
- * password resets, role changes, and account deactivation.
- * Never delete from this table; rows should only be inserted.
- */
-export async function up(pgm: MigrationBuilder): Promise<void> {
+export async function up(pgm) {
   pgm.createTable('audit_logs', {
     id: {
       type: 'uuid',
